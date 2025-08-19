@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Taskify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-slate-100 font-[Inter]">
+
+  <div class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-md">
+      <div id="auth-card" class="bg-white p-8 sm:p-10 rounded-2xl shadow-lg transition-all">
+        <div class="text-center mb-8">
+          <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">Welcome to Taskify</h1>
+          <p class="text-gray-500 mt-2">Your personal productivity partner.</p>
+        </div>
+        <form id="auth-form" class="space-y-5">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+            <input id="email-input" name="email" type="email" required
+              class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              placeholder="you@example.com"/>
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+            <input id="password-input" name="password" type="password" required
+              class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+              placeholder="••••••••"/>
+          </div>
+          <div id="auth-error" class="text-red-500 text-sm text-center font-medium hidden"></div>
+          <div id="auth-message" class="text-green-600 text-sm text-center font-medium hidden"></div>
+          <div class="flex flex-col sm:flex-row gap-3 pt-3">
+            <button type="submit" id="login-button" class="auth-button bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg">
+              Sign In
+            </button>
+            <button type="submit" id="signup-button" class="auth-button bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-lg">
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+      <p class="text-xs text-gray-400 text-center mt-6">All your data is securely stored with Supabase.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./js/auth.js"></script>
+</body>
+</html>
