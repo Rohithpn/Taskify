@@ -1,5 +1,3 @@
-// js/supabaseClient.js
-// FIX: Destructure createClient from window.supabase to ensure the library is loaded first.
 const { createClient } = window.supabase;
 
 const supabaseUrl = "https://rdqkfymxuppvznbinsbq.supabase.co";
